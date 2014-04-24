@@ -26,8 +26,8 @@ $form = $this->beginWidget('BaseEventTypeCActiveForm', array(
 	'id'=>'update-form',
 	'enableAjaxValidation'=>false,
 	'layoutColumns' => array(
-		'label' => 2,
-		'field' => 10
+		'label' => 4,
+		'field' => 8
 	)
 ));
 

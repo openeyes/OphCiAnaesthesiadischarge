@@ -5,7 +5,7 @@ class m140424_123127_event_type_OphCiAnaesthesiadischarge extends CDbMigration
 	{
 		if (!$this->dbConnection->createCommand()->select('id')->from('event_type')->where('class_name=:class_name', array(':class_name'=>'OphCiAnaesthesiadischarge'))->queryRow()) {
 			$group = $this->dbConnection->createCommand()->select('id')->from('event_group')->where('name=:name',array(':name'=>'Clinical events'))->queryRow();
-			$this->insert('event_type', array('class_name' => 'OphCiAnaesthesiadischarge', 'name' => 'AnaesthesiaDischarge','event_group_id' => $group['id']));
+			$this->insert('event_type', array('class_name' => 'OphCiAnaesthesiadischarge', 'name' => 'Anaesthesia Patient Discharge','event_group_id' => $group['id']));
 		}
 
 		$event_type = $this->dbConnection->createCommand()->select('id')->from('event_type')->where('class_name=:class_name', array(':class_name'=>'OphCiAnaesthesiadischarge'))->queryRow();

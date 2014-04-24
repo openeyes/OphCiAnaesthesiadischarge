@@ -28,6 +28,7 @@
 	</header>
 
 	<div class="element-fields">
+		<p>Patient has met the following discharge criteria for 30 minutes continuously:</p>
 		<div class="element-data element-eyes row">
 			<div class="element-eye right-eye column">
 				<div class="data-row">

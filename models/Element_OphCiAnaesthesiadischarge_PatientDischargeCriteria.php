@@ -71,6 +71,7 @@ class Element_OphCiAnaesthesiadischarge_PatientDischargeCriteria  extends  BaseE
 			array('event_id, pain_score_1_or_less, apvu, mews_score_1_or_less, nausea_vomiting_score_1_or_less, blood_loss_score_1_or_less, diabetics_blood_sugar_range, anaesthesia_summary, patient_reviewed_and_discharged,  ', 'safe'),
 			array('pain_score_1_or_less, apvu, mews_score_1_or_less, nausea_vomiting_score_1_or_less, blood_loss_score_1_or_less, diabetics_blood_sugar_range, anaesthesia_summary, patient_reviewed_and_discharged,  ', 'required'),
 			array('id, event_id, pain_score_1_or_less, apvu, mews_score_1_or_less, nausea_vomiting_score_1_or_less, blood_loss_score_1_or_less, diabetics_blood_sugar_range, anaesthesia_summary, patient_reviewed_and_discharged, ', 'safe', 'on' => 'search'),
+			array('pain_score_1_or_less, apvu, mews_score_1_or_less, nausea_vomiting_score_1_or_less, blood_loss_score_1_or_less, diabetics_blood_sugar_range','compare','compareValue'=>1)
 		);
 	}
 

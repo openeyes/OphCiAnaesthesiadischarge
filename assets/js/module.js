@@ -43,13 +43,21 @@ $(document).ready(function() {
 
 	function showWrapper()
 	{
-		var show = true;
+		var criteriaMet = true;
 		$("input:radio").each(function(){
 			if(!$(this).is(':checked') && $(this).val()==1){
-				show=false;
+				criteriaMet=false;
 			}
 		})
-		show ? $(".wrapper").show() :	$(".wrapper").hide();
+		if( criteriaMet) {
+			$(".criteria-met").show()
+			$(".criteria-not-met").hide()
+		}
+		else
+		{
+			$(".criteria-met").hide();
+			$(".criteria-not-met").show();
+		}
 	}
 
 	$(document.body).on('click', '[type="radio"]', function(e) {

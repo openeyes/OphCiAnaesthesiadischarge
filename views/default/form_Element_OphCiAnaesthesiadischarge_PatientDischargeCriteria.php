@@ -23,10 +23,6 @@
 				 data-element-type-class="<?php echo $element->elementType->class_name?>"
 				 data-element-type-name="<?php echo $element->elementType->name?>"
 				 data-element-display-order="<?php echo $element->elementType->display_order?>">
-	<header class="element-header">
-		<h3 class="element-title"><?php echo $element->elementType->name; ?></h3>
-	</header>
-
 	<div class="element-fields">
 		<p>Patient has met the following discharge criteria for 30 minutes continuously:</p>
 		<div class="element-data element-eyes row">
@@ -46,7 +42,8 @@
 			</div>
 		</div>
 		<BR/>
-		<div align="center"><div class="wrapper field-highlight inline" style="background-color: limegreen; padding:10px; border: 1px solid black; display:none">Discharge Criteria Met</div></div>
+		<div align="center"><div class="criteria-met wrapper field-highlight inline" style="background-color: limegreen; padding:10px; border: 1px solid black; display:none">Discharge Criteria Met</div></div>
+		<div align="center"><div class="criteria-not-met wrapper field-highlight inline" style="background-color: #FF5F5F; padding:10px; border: 1px solid black;">Discharge Criteria Not Met</div></div>
 		<div class="element-fields">
 			<?php	$form->layoutColumns = array('label' => 2,'field' => 10);	?>
 			<?php echo $form->textArea($element, 'anaesthesia_summary', array('rows' => 6, 'cols' => 80))?>

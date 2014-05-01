@@ -23,38 +23,45 @@
 		<h3 class="element-title"><?php echo $element->elementType->name?></h3>
 	</header>
 
-		<div class="element-data">
-				<div class="row data-row">
-			<div class="large-2 column"><div class="data-label"><?php echo CHtml::encode($element->getAttributeLabel('pain_score_1_or_less'))?>:</div></div>
-			<div class="large-10 column end"><div class="data-value"><?php echo $element->pain_score_1_or_less ? 'Yes' : 'No'?></div></div>
+	<div class="element-data">
+		<div class="row data-row">
+			<div class="large-3 column"><div class="data-label"><?php echo CHtml::encode($element->getAttributeLabel('pain_score_1_or_less'))?>:</div></div>
+			<div class="large-9 column end"><div class="data-value"><?php echo $element->pain_score_1_or_less ? 'Yes' : 'No'?></div></div>
 		</div>
 		<div class="row data-row">
-			<div class="large-2 column"><div class="data-label"><?php echo CHtml::encode($element->getAttributeLabel('apvu'))?>:</div></div>
-			<div class="large-10 column end"><div class="data-value"><?php echo $element->apvu ? 'Yes' : 'No'?></div></div>
+			<div class="large-3 column"><div class="data-label"><?php echo CHtml::encode($element->getAttributeLabel('apvu'))?>:</div></div>
+			<div class="large-9 column end"><div class="data-value"><?php echo $element->apvu ? 'Yes' : 'No'?></div></div>
 		</div>
 		<div class="row data-row">
-			<div class="large-2 column"><div class="data-label"><?php echo CHtml::encode($element->getAttributeLabel('mews_score_1_or_less'))?>:</div></div>
-			<div class="large-10 column end"><div class="data-value"><?php echo $element->mews_score_1_or_less ? 'Yes' : 'No'?></div></div>
+			<div class="large-3 column"><div class="data-label"><?php echo CHtml::encode($element->getAttributeLabel('mews_score_1_or_less'))?>:</div></div>
+			<div class="large-9 column end"><div class="data-value"><?php echo $element->mews_score_1_or_less ? 'Yes' : 'No'?></div></div>
 		</div>
 		<div class="row data-row">
-			<div class="large-2 column"><div class="data-label"><?php echo CHtml::encode($element->getAttributeLabel('nausea_vomiting_score_1_or_less'))?>:</div></div>
-			<div class="large-10 column end"><div class="data-value"><?php echo $element->nausea_vomiting_score_1_or_less ? 'Yes' : 'No'?></div></div>
+			<div class="large-3 column"><div class="data-label"><?php echo CHtml::encode($element->getAttributeLabel('nausea_vomiting_score_1_or_less'))?>:</div></div>
+			<div class="large-9 column end"><div class="data-value"><?php echo $element->nausea_vomiting_score_1_or_less ? 'Yes' : 'No'?></div></div>
 		</div>
 		<div class="row data-row">
-			<div class="large-2 column"><div class="data-label"><?php echo CHtml::encode($element->getAttributeLabel('blood_loss_score_1_or_less'))?>:</div></div>
-			<div class="large-10 column end"><div class="data-value"><?php echo $element->blood_loss_score_1_or_less ? 'Yes' : 'No'?></div></div>
+			<div class="large-3 column"><div class="data-label"><?php echo CHtml::encode($element->getAttributeLabel('blood_loss_score_1_or_less'))?>:</div></div>
+			<div class="large-9 column end"><div class="data-value"><?php echo $element->blood_loss_score_1_or_less ? 'Yes' : 'No'?></div></div>
 		</div>
 		<div class="row data-row">
-			<div class="large-2 column"><div class="data-label"><?php echo CHtml::encode($element->getAttributeLabel('diabetics_blood_sugar_range'))?>:</div></div>
-			<div class="large-10 column end"><div class="data-value"><?php echo $element->diabetics_blood_sugar_range ? 'Yes' : 'No'?></div></div>
+			<div class="large-3 column"><div class="data-label"><?php echo CHtml::encode($element->getAttributeLabel('diabetics_blood_sugar_range'))?>:</div></div>
+			<div class="large-9 column end"><div class="data-value"><?php echo $element->diabetics_blood_sugar_range ? 'Yes' : 'No'?></div></div>
 		</div>
 		<div class="row data-row">
-			<div class="large-2 column"><div class="data-label"><?php echo CHtml::encode($element->getAttributeLabel('anaesthesia_summary'))?></div></div>
-			<div class="large-10 column end"><div class="data-value"><?php echo CHtml::encode($element->anaesthesia_summary)?></div></div>
+			<div class="large-3 column"><div class="data-label"><?php echo CHtml::encode($element->getAttributeLabel('anaesthesia_summary'))?></div></div>
+			<div class="large-9 column end"><div class="data-value"><?php echo CHtml::encode($element->anaesthesia_summary)?></div></div>
 		</div>
 		<div class="row data-row">
-			<div class="large-2 column"><div class="data-label"><?php echo CHtml::encode($element->getAttributeLabel('patient_reviewed_and_discharged'))?></div></div>
-			<div class="large-10 column end"><div class="data-value"><?php echo $element->patient_reviewed_and_discharged ? 'Yes' : 'No'?></div></div>
+			<div class="large-3 column"><div class="data-label"><?php echo CHtml::encode($element->getAttributeLabel('patient_reviewed_and_discharged'))?></div></div>
+			<div class="large-9 column end"><div class="data-value"><?php echo $element->patient_reviewed_and_discharged ? 'Yes' : 'No'?></div></div>
 		</div>
+		<div class="row data-row">
+			<div class="large-12 column end">
+				<div class="criteriaContainer">
+					<div class="criteria criteria-<?php if (!$element->criteriaMet) {?>not-<?php }?>met wrapper field-highlight inline">Discharge Criteria <?php if (!$element->criteriaMet) {?>Not <?php }?>Met</div>
+				</div>
+			</div>
 		</div>
+	</div>
 </section>

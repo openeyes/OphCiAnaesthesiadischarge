@@ -41,15 +41,14 @@
 				</div>
 			</div>
 		</div>
-		<BR/>
-		<div align="center"><div class="criteria-met wrapper field-highlight inline" style="background-color: limegreen; padding:10px; border: 1px solid black; display:none">Discharge Criteria Met</div></div>
-		<div align="center"><div class="criteria-not-met wrapper field-highlight inline" style="background-color: #FF5F5F; padding:10px; border: 1px solid black;">Discharge Criteria Not Met</div></div>
+		<div class="criteriaContainer">
+			<div class="criteria criteria-<?php if (!$element->criteriaMet) {?>not-<?php }?>met wrapper field-highlight inline">Discharge Criteria <?php if (!$element->criteriaMet) {?>Not <?php }?>Met</div>
+		</div>
 		<div class="element-fields">
 			<?php	$form->layoutColumns = array('label' => 2,'field' => 10);	?>
 			<?php echo $form->textArea($element, 'anaesthesia_summary', array('rows' => 6, 'cols' => 80))?>
-			<?php echo $form->checkBox($element, 'patient_reviewed_and_discharged')?>
+			<?php echo $form->checkBox($element, 'patient_reviewed_and_discharged', array('text-align' => 'right'))?>
 		</div>
 	</div>
 	<?php	$form->layoutColumns = array('label' => 4,'field' => 8);	?>
-
 </section>

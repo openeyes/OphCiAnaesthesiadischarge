@@ -23,3 +23,22 @@
 		background-image: image-url("medium.png");
 	}
 }
+
+.criteriaContainer {
+	margin: auto;
+	width: 14em;
+	margin-top: 1em;
+}
+
+.criteria {
+	padding: 10px;
+	border: 1px solid black;
+}
+
+.criteria-met {
+	background-color: limegreen;
+}
+
+.criteria-not-met {
+	background-color: #FF5F5F;
+}

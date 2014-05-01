@@ -2,8 +2,8 @@
 /* Module-specific javascript can be placed here */
 
 $(document).ready(function() {
-			handleButton($('#et_save'),function() {
-					});
+	handleButton($('#et_save'),function() {
+	});
 	
 	handleButton($('#et_cancel'),function(e) {
 		if (m = window.location.href.match(/\/update\/[0-9]+/)) {
@@ -39,29 +39,14 @@ $(document).ready(function() {
 		}
 	});
 
-	showWrapper();
-
-	function showWrapper()
-	{
-		var criteriaMet = true;
-		$("input:radio").each(function(){
-			if(!$(this).is(':checked') && $(this).val()==1){
-				criteriaMet=false;
-			}
-		})
-		if( criteriaMet) {
-			$(".criteria-met").show()
-			$(".criteria-not-met").hide()
+	$('input[type="radio"]').click(function(e) {
+		if ($('input[type="radio"][name^="Element_OphCiAnaesthesiadischarge_PatientDischargeCriteria"][value="1"]:not(:checked)').length >0) {
+			$('.criteria').removeClass('criteria-met').addClass('criteria-not-met');
+			$('.criteria').text('Discharge Criteria Not Met');
+		} else {
+			$('.criteria').removeClass('criteria-not-met').addClass('criteria-met');
+			$('.criteria').text('Discharge Criteria Met');
 		}
-		else
-		{
-			$(".criteria-met").hide();
-			$(".criteria-not-met").show();
-		}
-	}
-
-	$(document.body).on('click', '[type="radio"]', function(e) {
-		showWrapper();
 	});
 });
 

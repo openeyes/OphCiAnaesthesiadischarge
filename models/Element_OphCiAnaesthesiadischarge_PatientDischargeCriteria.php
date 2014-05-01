@@ -100,13 +100,13 @@ class Element_OphCiAnaesthesiadischarge_PatientDischargeCriteria  extends  BaseE
 			'pain_score_1_or_less' => 'Pain score 1 or less',
 			'apvu' => 'APVU = A',
 			'mews_score_1_or_less' => 'MEWS score 1 or less',
-			'nausea_vomiting_score_1_or_less' => 'Nausea/Vomiting score 1 or less',
+			'nausea_vomiting_score_1_or_less' => 'Nausea/vomiting score 1 or less',
 			'blood_loss_score_1_or_less' => 'Blood loss score 1 or less',
 			'diabetics_blood_sugar_range' => 'Diabetics blood sugar range 4-17mmol/l or 70-30mg/dl',
-			'anaesthesia_summary' => 'Anaesthesia Summary',
-			'patient_reviewed_and_discharged' => 'Patient Reviewed and Discharged',
+			'anaesthesia_summary' => 'Anaesthesia summary',
+			'patient_reviewed_and_discharged' => 'Patient reviewed and discharged',
 			'anesthesiologist' => 'Anesthesiologist ',
-			'electronic_signature' => 'Electronic Signature',
+			'electronic_signature' => 'Electronic signature',
 		);
 	}
 
@@ -136,12 +136,15 @@ class Element_OphCiAnaesthesiadischarge_PatientDischargeCriteria  extends  BaseE
 		));
 	}
 
-
-
-	protected function afterSave()
+	public function getCriteriaMet()
 	{
+		foreach (array('pain_score_1_or_less','apvu','mews_score_1_or_less','nausea_vomiting_score_1_or_less','blood_loss_score_1_or_less','diabetics_blood_sugar_range') as $field) {
+			if (!$this->$field) {
+				return false;
+			}
+		}
 
-		return parent::afterSave();
+		return true;
 	}
 }
 ?>

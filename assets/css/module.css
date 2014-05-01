@@ -22,9 +22,32 @@
 }
 /* line 19, ../sass/components/_event.scss */
 .event .event-content {
-  background-image: url('../img/watermark.png?1398342687');
+  background-image: url('../img/watermark.png?1398777471');
 }
 /* line 22, ../sass/components/_event.scss */
 .event .event-title {
-  background-image: url('../img/medium.png?1398342687');
+  background-image: url('../img/medium.png?1398777471');
+}
+
+/* line 27, ../sass/components/_event.scss */
+.criteriaContainer {
+  margin: auto;
+  width: 14em;
+  margin-top: 1em;
+}
+
+/* line 33, ../sass/components/_event.scss */
+.criteria {
+  padding: 10px;
+  border: 1px solid black;
+}
+
+/* line 38, ../sass/components/_event.scss */
+.criteria-met {
+  background-color: limegreen;
+}
+
+/* line 42, ../sass/components/_event.scss */
+.criteria-not-met {
+  background-color: #FF5F5F;
 }

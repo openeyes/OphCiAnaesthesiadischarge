@@ -42,7 +42,9 @@
 			</div>
 		</div>
 		<div class="criteriaContainer">
-			<div class="criteria criteria-<?php if (!$element->criteriaMet) {?>not-<?php }?>met wrapper field-highlight inline">Discharge Criteria <?php if (!$element->criteriaMet) {?>Not <?php }?>Met</div>
+			<div class="criteria criteria-<?php if (!$element->criteriaMet) {?>not-<?php }?>met wrapper field-highlight inline">
+				Discharge Criteria <?php if (!$element->criteriaMet) {?>Not <?php }?>Met
+			</div>
 		</div>
 		<div class="element-fields">
 			<?php	$form->layoutColumns = array('label' => 2,'field' => 10);	?>

@@ -26,32 +26,34 @@
 	<div class="element-data">
 		<div class="row data-row">
 			<div class="large-3 column"><div class="data-label"><?php echo CHtml::encode($element->getAttributeLabel('pain_score_1_or_less'))?>:</div></div>
-			<div class="large-9 column end"><div class="data-value"><?php echo $element->pain_score_1_or_less ? 'Yes' : 'No'?></div></div>
+			<div class="large-9 column end"><div class="data-value"><?php echo is_null($element->pain_score_1_or_less) ? 'Not recorded' : ($element->pain_score_1_or_less ? 'Yes' : 'No')?></div></div>
 		</div>
 		<div class="row data-row">
 			<div class="large-3 column"><div class="data-label"><?php echo CHtml::encode($element->getAttributeLabel('apvu'))?>:</div></div>
-			<div class="large-9 column end"><div class="data-value"><?php echo $element->apvu ? 'Yes' : 'No'?></div></div>
+			<div class="large-9 column end"><div class="data-value"><?php echo is_null($element->apvu) ? 'Not recorded' : ($element->apvu ? 'Yes' : 'No')?></div></div>
 		</div>
 		<div class="row data-row">
 			<div class="large-3 column"><div class="data-label"><?php echo CHtml::encode($element->getAttributeLabel('mews_score_1_or_less'))?>:</div></div>
-			<div class="large-9 column end"><div class="data-value"><?php echo $element->mews_score_1_or_less ? 'Yes' : 'No'?></div></div>
+			<div class="large-9 column end"><div class="data-value"><?php echo is_null($element->mews_score_1_or_less) ? 'Not recorded' : ($element->mews_score_1_or_less ? 'Yes' : 'No')?></div></div>
 		</div>
 		<div class="row data-row">
 			<div class="large-3 column"><div class="data-label"><?php echo CHtml::encode($element->getAttributeLabel('nausea_vomiting_score_1_or_less'))?>:</div></div>
-			<div class="large-9 column end"><div class="data-value"><?php echo $element->nausea_vomiting_score_1_or_less ? 'Yes' : 'No'?></div></div>
+			<div class="large-9 column end"><div class="data-value"><?php echo is_null($element->nausea_vomiting_score_1_or_less) ? 'Not recorded' : ($element->nausea_vomiting_score_1_or_less ? 'Yes' : 'No')?></div></div>
 		</div>
 		<div class="row data-row">
 			<div class="large-3 column"><div class="data-label"><?php echo CHtml::encode($element->getAttributeLabel('blood_loss_score_1_or_less'))?>:</div></div>
-			<div class="large-9 column end"><div class="data-value"><?php echo $element->blood_loss_score_1_or_less ? 'Yes' : 'No'?></div></div>
+			<div class="large-9 column end"><div class="data-value"><?php echo is_null($element->blood_loss_score_1_or_less) ? 'Not recorded' : ($element->blood_loss_score_1_or_less ? 'Yes' : 'No')?></div></div>
 		</div>
 		<div class="row data-row">
 			<div class="large-3 column"><div class="data-label"><?php echo CHtml::encode($element->getAttributeLabel('diabetics_blood_sugar_range'))?>:</div></div>
-			<div class="large-9 column end"><div class="data-value"><?php echo $element->diabetics_blood_sugar_range ? 'Yes' : 'No'?></div></div>
+			<div class="large-9 column end"><div class="data-value"><?php echo is_null($element->diabetics_blood_sugar_range) ? 'Not recorded' : ($element->diabetics_blood_sugar_range ? 'Yes' : 'No')?></div></div>
 		</div>
-		<div class="row data-row">
-			<div class="large-3 column"><div class="data-label"><?php echo CHtml::encode($element->getAttributeLabel('anaesthesia_summary'))?></div></div>
-			<div class="large-9 column end"><div class="data-value"><?php echo CHtml::encode($element->anaesthesia_summary)?></div></div>
-		</div>
+		<?php if ($element->anaesthesia_summary) {?>
+			<div class="row data-row">
+				<div class="large-3 column"><div class="data-label"><?php echo CHtml::encode($element->getAttributeLabel('anaesthesia_summary'))?></div></div>
+				<div class="large-9 column end"><div class="data-value"><?php echo CHtml::encode($element->anaesthesia_summary)?></div></div>
+			</div>
+		<?php }?>
 		<div class="row data-row">
 			<div class="large-3 column"><div class="data-label"><?php echo CHtml::encode($element->getAttributeLabel('patient_reviewed_and_discharged'))?></div></div>
 			<div class="large-9 column end"><div class="data-value"><?php echo $element->patient_reviewed_and_discharged ? 'Yes' : 'No'?></div></div>
